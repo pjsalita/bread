@@ -19,7 +19,7 @@ $router->get('/', function () use ($router) {
 
 $router->group(['prefix' => 'api', 'middleware' => 'json'], function () use ($router) {
     $router->group(['prefix' => 'v1'], function () use ($router) {
-        $router->put('register', 'AuthController@register');
+        $router->post('register', 'AuthController@register');
         $router->post('login', 'AuthController@login');
 
         $router->group(['middleware' => 'auth'], function () use ($router) {
