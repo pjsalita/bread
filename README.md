@@ -11,7 +11,7 @@
     ```sh
     $ git clone https://github.com/pjsalita/bread.git
     ```
-2. Install and compile dependencies
+2. Change directory and install dependencies
     ```sh
     $ cd bread
     $ composer install
@@ -36,8 +36,9 @@
     ```
     $ php -S localhost:8000 -t public
     ```
+Note: Make sure php-sqlite extension is installed/enabled.
 
-Seeded user(to skip registering for testing):
+Seeded user(to skip registration for testing):
 - Username: sample
 - Password: password
 
