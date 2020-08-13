@@ -9,7 +9,7 @@ class CustomerController extends Controller
 {
     public function index(Request $request)
     {
-        $columns = implode(Schema::getColumnListing('customers'), ',');
+        $columns = implode(',', Schema::getColumnListing('customers'));
 
         $rules = [
             'per_page' => 'numeric|regex:/^[0-9]+/|not_in:0',
