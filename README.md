@@ -43,13 +43,13 @@ Seeded user(to skip registration for testing):
 - Password: password
 
 Endpoints:
-- http://bread.xyzfiglet.cf/api/v1/register (POST)
+- http://localhost:8000/api/v1/register (POST)
   (params: name, email, username, password, password_confirmation)
-- http://bread.xyzfiglet.cf/api/v1/login (POST)
+- http://localhost:8000/api/v1/login (POST)
   (params: username, password)
-- http://bread.xyzfiglet.cf/api/v1/customers?page=1... (GET)
+- http://localhost:8000/api/v1/customers?page=1... (GET)
   (can have **per_page**, **sort**, **order**, and **page**)
-- http://bread.xyzfiglet.cf/api/v1/customers/{id} (GET, PATCH, DELETE)
+- http://localhost:8000/api/v1/customers/{id} (GET, PATCH, DELETE)
   (PATCH params: firstname, lastname, date_of_birth, is_active)
-- http://bread.xyzfiglet.cf/api/v1/customers (PUT)
+- http://localhost:8000/api/v1/customers (PUT)
 
