@@ -1,0 +1,16 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bread_app
+    restart: unless-stopped
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "${APP_PORT:-8000}:8000"
+    environment:
+      - APP_DEBUG=${APP_DEBUG:-false}
+      - DB_CONNECTION=sqlite
+    command: php -S 0.0.0.0:8000 -t public

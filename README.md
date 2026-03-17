@@ -19,6 +19,7 @@
 3. Create .env file and update **APP_KEY** to random string 32 characters string
     ```sh
     $ cp .env.example .env
+    $ sed -i "s/^APP_KEY=.*/APP_KEY=$(tr -dc 'A-Za-z0-9' </dev/urandom | head -c 32)/" .env
     ```
 4. Create **database.sqlite** file under **database** folder
     ```
